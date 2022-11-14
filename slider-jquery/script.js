@@ -3,9 +3,7 @@ $(function() {
     let slideCount =  $(".slider .slides .item").length;
     let slideWidth =  $(".slider .slides .item img").width();
     let slideHeight =  $(".slider .slides .item img").height();
-    console.log(slideHeight);
     let slideUlWidth =  slideCount * slideWidth;
-    console.log(slideUlWidth)
 
     $(".slider").css({"max-width":slideWidth, "height": slideHeight});
     $(".slider .slides").css({"width":slideUlWidth, "margin-left": - slideWidth });
@@ -28,8 +26,6 @@ $(function() {
             $(".slider .slides").css("left","");
         });
     }
-
-
     $(".next").on("click",function(){
         moveRight();
     });
@@ -37,6 +33,4 @@ $(function() {
     $(".prev").on("click",function(){
         moveLeft();
     });
-
-
 });
